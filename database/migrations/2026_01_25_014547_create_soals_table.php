@@ -13,9 +13,7 @@ return new class extends Migration
     {
         Schema::create('soals', function (Blueprint $table) {
             $table->id();
-            $table->string("kode_jenistryout");
-            $table->string("kode_paket");
-            $table->string("is_event");
+            $table->string("nama_paket_soal");
             $table->string("soal");
             $table->string("pilihan1");
             $table->string("pilihan2");

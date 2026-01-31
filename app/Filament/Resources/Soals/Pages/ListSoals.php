@@ -16,6 +16,14 @@ class ListSoals extends ListRecords
     protected function getHeaderActions(): array
     {
         return [
+            // Tombol Download Template
+            Actions\Action::make('downloadTemplate')
+                ->label('Download Template')
+                ->color('info')
+                ->icon('heroicon-o-document-arrow-down')
+                ->url(asset('templates/soal-importer.csv')) // Arahkan ke folder public
+                ->openUrlInNewTab(),
+
             CreateAction::make(),
             Actions\ImportAction::make()
             ->importer(SoalImporter::class)

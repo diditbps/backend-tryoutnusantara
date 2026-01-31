@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class PaketSoal extends Model
+class SubJenisTryout extends Model
 {
     //
     protected $guarded = [];
