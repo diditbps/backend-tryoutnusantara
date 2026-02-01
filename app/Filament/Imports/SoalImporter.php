@@ -16,18 +16,28 @@ class SoalImporter extends Importer
     {
         return [
             //
-            ImportColumn::make('kode_jenistryout'),
-            ImportColumn::make('kode_paket'),
-            ImportColumn::make('is_event'),
-            ImportColumn::make('soal'),
-            ImportColumn::make('pilihan1'),
-            ImportColumn::make('pilihan2'),
-            ImportColumn::make('pilihan3'),
-            ImportColumn::make('pilihan4'),
-            ImportColumn::make('pilihan5'),
+            ImportColumn::make('nama_paket_soal')
+            ->rules(['required']),
+            ImportColumn::make('tingkat_kesulitan')
+            ->rules(['required']),
             ImportColumn::make('url_image'),
-            ImportColumn::make('jawaban'),
-            ImportColumn::make('tingkat_kesulitan'),
+            ImportColumn::make('soal')
+            ->rules(['required']),
+            ImportColumn::make('pilihan1')
+            ->rules(['required']),
+            ImportColumn::make('pilihan2')
+            ->rules(['required']),
+            ImportColumn::make('pilihan3')
+            ->rules(['required']),
+            ImportColumn::make('pilihan4')
+            ->rules(['required']),
+            ImportColumn::make('pilihan5'),
+            ImportColumn::make('jawaban')
+            ->rules(['required']),
+            ImportColumn::make('pembahasan'),
+            ImportColumn::make('hint'),
+            ImportColumn::make('poin')
+            ->rules(['required']),
             ImportColumn::make('check_qc'),
             ImportColumn::make('nama_qc'),
         ];

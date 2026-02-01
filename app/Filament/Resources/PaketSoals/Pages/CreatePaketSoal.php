@@ -8,4 +8,9 @@ use Filament\Resources\Pages\CreateRecord;
 class CreatePaketSoal extends CreateRecord
 {
     protected static string $resource = PaketSoalResource::class;
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
 }

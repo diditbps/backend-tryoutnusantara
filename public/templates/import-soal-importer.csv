@@ -1,0 +1,16 @@
+﻿nama_paket_soal;tingkat_kesulitan;url_image;soal;pilihan1;pilihan2;pilihan3;pilihan4;pilihan5;jawaban;pembahasan;hint;poin;check_qc;nama_qc
+TIU CPNS 2026;mudah;;GERHANA : BULAN = ... : …;Banjir : Air;Fajar : Matahari;Awan : Hujan;Erupsi : Gunung;;pilihan4;Gerhana adalah fenomena yang terjadi pada bulan, sebagaimana erupsi adalah fenomena yang terjadi pada gunung.;hint satu;10;Uncheck;-
+TIU CPNS 2026;sedang;;Jika semua mahasiswa memakai jaket almamater, dan sebagian orang yang memakai jaket almamater membawa tas. Maka kesimpulan yang tepat adalah…;Mahasiswa tidak ada yang membawa tas;Semua mahasiswa membawa tas;Semua orang yang membawa tas adalah mahasiswa;Sebagian mahasiswa membawa tas;;pilihan4;Karena semua mahasiswa adalah pemakai jaket almamater dan sebagian pemakai jaket membawa tas, maka ada sebagian mahasiswa yang membawa tas.;hint 2;10;Uncheck;-
+TIU CPNS 2026;sulit;;"Lanjutkan deret angka berikut:
+2, 3, 5, 8, 13, 21, ...";29;34;35;32;;pilihan2;Deret ini adalah deret Fibonacci, di mana angka berikutnya adalah hasil penjumlahan dua angka sebelumnya: $13 + 21 = 34$.;hint 3;10;Uncheck;-
+TIU CPNS 2026;mudah;;Sebuah toko memberikan diskon ganda sebesar 20% dan dilanjutkan diskon 10%. Berapakah total diskon sebenarnya yang diterima pembeli?;28%;25%;30%;22%;;pilihan1;Harga awal $100\%$ didiskon $20\%$ menjadi $80\%$, lalu $80\%$ didiskon $10\%$ (yaitu $8\%$) menjadi $72\%$. Total diskon adalah $100\% - 72\% = 28\%$.;hint 4;10;Uncheck;-
+TIU CPNS 2026;sedang;;Jika x=15 persen dari 3000 dan y=30 persen dari 1500, maka...;x<y;x>y;x=y;Hubungan x dan y tidak dapat ditentukan;;pilihan3;Nilai $x = 0,15 \times 3000 = 450$ dan $y = 0,30 \times 1500 = 450$, maka nilainya identik.;hint 5;10;Uncheck;-
+TIU CPNS 2026;sulit;;"Analogi Kata
+
+MAKAN : KENYANG = ... : …";Belajar : Pandai;Lampu : Terang;Tidur : Mimpi;Minum : Haus;;pilihan1;Hubungan sebab-akibat: makan menyebabkan kenyang, sebagaimana belajar menyebabkan pandai.;hint 6;10;Uncheck;-
+TIU CPNS 2026;mudah;;Semua pohon di kebun berdaun hijau. Sebagian pohon di kebun adalah pohon mangga. Kesimpulan yang benar adalah…;Semua pohon mangga berdaun hijau;Pohon mangga tidak ada yang di kebun;Sebagian pohon mangga tidak berdaun hijau;Hanya pohon mangga yang berdaun hijau;;pilihan1;Ini adalah kesimpulan yang paling tepat karena pohon mangga adalah bagian dari semua pohon di kebun yang berdaun hijau.;hint 7;10;Uncheck;-
+TIU CPNS 2026;sedang;;Lanjutkan deret berikut: A, C, E, G, …;J;I;H;K;;pilihan2;Pola deret ini meloncati satu huruf (A-b-C-d-E-f-G-h-I), maka huruf berikutnya adalah I.;hint 8;10;Uncheck;-
+TIU CPNS 2026;sulit;;Seorang pekerja mampu menyelesaikan sebuah pekerjaan dalam 12 hari. Jika ada 3 pekerja dengan kecepatan yang sama, berapa lama pekerjaan tersebut selesai?;8 hari;36 hari;6 hari;4 hari;;pilihan4;Menggunakan perbandingan berbalik nilai: $12 \text{ hari} / 3 \text{ pekerja} = 4 \text{ hari}$.;hint 9;10;Uncheck;-
+TIU CPNS 2026;mudah;;Berapakah hasil dari 25×4+100:5?;200;120;40;105;;pilihan2;Perhitungannya: $(25 \times 4) + (100 : 5) = 100 + 20 = 120$. Operasi perkalian dan pembagian didahulukan.;hint 10;10;Uncheck;-
+;;;;;;;;;;;;;Uncheck;-
+;;;;;;;;;;;;;Uncheck;-

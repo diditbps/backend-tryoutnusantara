@@ -13,10 +13,13 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use UnitEnum;
 
 class PaketTryoutResource extends Resource
 {
     protected static ?string $model = PaketTryout::class;
+    protected static ?int $navigationSort = 2;
+    protected static string | UnitEnum | null $navigationGroup = 'Tryout';
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 

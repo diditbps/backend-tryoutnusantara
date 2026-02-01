@@ -4,6 +4,8 @@ namespace App\Filament\Resources\PaketSoals\Schemas;
 
 use Filament\Schemas\Schema;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Textarea;
 
 class PaketSoalForm
 {
@@ -12,15 +14,14 @@ class PaketSoalForm
         return $schema
             ->components([
                 //
-                TextInput::make('nama_paket'),
-                TextInput::make('sub_jenis_tryout'),
-                TextInput::make('durasi'),
-                TextInput::make('ket_member'),
-                TextInput::make('harga'),
-                TextInput::make('event'),
-                TextInput::make('tanggal_rilis'),
-                TextInput::make('tanggal_expired'),
-                TextInput::make('tahun')
+                Select::make('nama_paket_tryout')
+                    ->relationship('namaPaketTryout', 'nama_paket_tryout')
+                    ->required(),
+                TextInput::make('nama_paket_soal'),
+                Textarea::make('deskripsi'),
+                TextInput::make('durasi')
+                ->label("Durasi (dalam menit)")
+                ->required(),
             ]);
     }
 }

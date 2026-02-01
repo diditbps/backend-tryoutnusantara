@@ -9,9 +9,9 @@ class Soal extends Model
 {
     //
     protected $guarded = [];
-    public function jenisTryout(): BelongsTo
+    public function paketSoal(): BelongsTo
     {
         // Pastikan nama foreign key di tabel soals sesuai (misal: jenis_tryout_id)
-        return $this->belongsTo(JenisTryout::class, 'kode_jenistryout', 'id');
+        return $this->belongsTo(PaketSoal::class, 'nama_paket_soal', 'nama_paket_soal');
     }
 }

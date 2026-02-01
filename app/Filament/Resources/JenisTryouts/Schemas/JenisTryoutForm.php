@@ -11,7 +11,7 @@ class JenisTryoutForm
     {
         return $schema
             ->components([
-                TextInput::make('Jenis')
+                TextInput::make('jenis_tryout')
                     ->required(),
             ]);
     }

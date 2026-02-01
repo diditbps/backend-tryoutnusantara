@@ -14,7 +14,7 @@ class JenisTryoutsTable
     {
         return $table
             ->columns([
-                TextColumn::make('Jenis')
+                TextColumn::make('jenis_tryout')
                     ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()

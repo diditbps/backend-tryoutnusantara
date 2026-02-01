@@ -16,18 +16,23 @@ class SoalApiResource extends JsonResource
     {
         return [
             'id' => $this->id,
+            'nama_paket_soal' => $this->nama_paket_soal,
             'soal' => $this->soal,
-            'jawaban' => $this->jawaban,
-            'paket' => $this->kode_paket,
             'pilihan' => [
-                $this->pilihan1,
-                $this->pilihan2,
-                $this->pilihan3,
-                $this->pilihan4,
-                $this->pilihan5,
+                'A' => $this->pilihan1,
+                'B' => $this->pilihan2,
+                'C' => $this->pilihan3,
+                'D' => $this->pilihan4,
+                'E' => $this->pilihan5,
             ],
-            'kesulitan' => $this->tingkat_kesulitan,
+            'tingkat_kesulitan' => $this->tingkat_kesulitan,
             'url_image' => $this->url_image,
+            'jawaban' => $this->jawaban,
+            'pembahasan' => $this->pembahasan,
+            'hint' => $this->hint,
+            'poin' => $this->poin,
+            'check_qc' => $this->check_qc,
+            'nama_qc' => $this->nama_qc,
         ];
     }
 }

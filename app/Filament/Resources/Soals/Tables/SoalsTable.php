@@ -15,13 +15,45 @@ class SoalsTable
         return $table
             ->columns([
                 //
-                TextColumn::make('kode_jenistryout'),
-                TextColumn::make('soal'),
-                TextColumn::make('url_image'),
-                TextColumn::make('kode_paket'),
-                TextColumn::make('tingkat_kesulitan'),
-                TextColumn::make('check_qc'),
+                TextColumn::make('nama_paket_soal')
+                    ->searchable(),
+                TextColumn::make('tingkat_kesulitan')
+                    ->searchable(),
+                TextColumn::make('url_image')
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('soal')
+                    ->searchable(),
+                TextColumn::make('pilihan1')
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('pilihan2')
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('pilihan3')
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('pilihan4')
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('pilihan5')
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('jawaban')
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('pembahasan')
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('hint')
+                    ->searchable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                TextColumn::make('poin')
+                    ->searchable(),
+                TextColumn::make('check_qc')
+                    ->searchable(),
                 TextColumn::make('nama_qc')
+                    ->searchable(),
             ])
             ->filters([
                 //

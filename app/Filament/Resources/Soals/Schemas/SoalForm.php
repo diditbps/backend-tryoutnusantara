@@ -11,7 +11,7 @@ use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Radio;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Grid;
-
+use Filament\Forms\Components\MarkdownEditor;
 
 class SoalForm
 {
@@ -24,12 +24,16 @@ class SoalForm
                 Section::make('Informasi Soal')
                     ->schema([
                         Grid::make(2)->schema([
-                            Select::make('kode_jenistryout')
-                                ->relationship('jenisTryout', 'Jenis')
+                            Select::make('nama_paket_soal')
+                                ->relationship('paketSoal', 'nama_paket_soal')
                                 ->required(),
-                            TextInput::make('kode_paket')->required(),
-                            Toggle::make('is_event')->required(),
-                            TextInput::make('tingkat_kesulitan')->required(),
+                            Select::make('tingkat_kesulitan')
+                                ->options([
+                                    'mudah' => 'Mudah',
+                                    'sedang' => 'Sedang',
+                                    'sulit' => 'Sulit',
+                                ])
+                                ->required(),
                         ]),
                         
                         FileUpload::make('url_image')->image()->disk('public'),
@@ -49,9 +53,16 @@ class SoalForm
                 // SEKSI TENGAH: Isi Soal
                 Section::make('Konten')
                     ->schema([
-                        RichEditor::make('soal')
+                        MarkdownEditor::make('soal')
+                            ->fileAttachmentsAcceptedFileTypes(['image/png', 'image/jpeg'])
                             ->required()
-                            ->columnSpanFull(),
+                            ->fileAttachmentsDisk('public') // Pastikan disk ini publik
+                            ->fileAttachmentsDirectory('soal-images'),
+                        
+                        TextInput::make('hint')
+                            ->required(),
+                        TextInput::make('poin')
+                            ->required(),
                     ]),
 
                 Section::make('Opsi Jawaban')
@@ -123,6 +134,12 @@ class SoalForm
                                     ->columnSpan(11)
                                     ->required(),
                             ])->extraAttributes(['class' => 'items-center']),
+
+                            MarkdownEditor::make('pembahasan')
+                            ->fileAttachmentsAcceptedFileTypes(['image/png', 'image/jpeg'])
+                            ->required()
+                            ->fileAttachmentsDisk('public') // Pastikan disk ini publik
+                            ->fileAttachmentsDirectory('soal-images'),
                         ]),
                     ]),
 
