@@ -7,6 +7,8 @@ use App\Http\Controllers\Api\JenistryoutController;
 use App\Http\Controllers\Api\PakettryoutController;
 use App\Http\Controllers\Api\PaketsoalController;
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\AktivityuserController;
+use App\Http\Controllers\Api\UseroligarkieController;
 
 
 Route::get('/user', function (Request $request) {
@@ -25,5 +27,11 @@ Route::get('/soals/paket/{paket}', [SoalApiController::class, 'filterpaketdanqc'
 Route::get('/paket_soal', [PaketsoalController::class, 'index']);
 Route::get('/paket_soal/{nama_paket_soal}', [PaketsoalController::class, 'filterNamapaketsoal']);
 
+Route::post('/loginuser', [UseroligarkieController::class, 'loginuser']);
+Route::get('/user/history/{id}', [UseroligarkieController::class, 'history']);
+Route::get('/user/historysoal/{id}', [UseroligarkieController::class, 'historysoal']);
 
-Route::post('/register', [AuthController::class, 'register']);
+// API POST untuk di Request dari FrontEnd
+Route::post('/add-register', [AuthController::class, 'register']);
+Route::post('/add-historyuser', [AktivityuserController::class, 'aktivity']);
+Route::post('/add-historysoal', [AktivityuserController::class, 'historysoal']);

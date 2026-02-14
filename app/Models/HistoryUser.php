@@ -9,6 +9,7 @@ class HistoryUser extends Model
 {
     //
     protected $guarded = [];
+    protected $table = 'history_users';
     public function idUser(): BelongsTo
     {
         // Pastikan nama foreign key di tabel soals sesuai (misal: jenis_tryout_id)
